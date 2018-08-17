@@ -1,0 +1,323 @@
+<html>
+    <head>
+        <title>Team-page</title>
+        <link rel="stylesheet" type="text/css" href="igemtemplates.css">
+
+        <style type="text/css">
+            .content{
+            }
+            .content-text{
+                width: 82%;
+                background-color: var(--background);
+                margin-right: auto;
+                margin-left: auto;
+            }
+            /* @media something so that it ignores the margin after tehe screen has been reduced too much*/
+            
+            .team-grid{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+                grid-template-rows: 1fr 1fr;
+                background-color: white;
+                grid-column-gap:1px;
+            }
+            .team-member-card{
+                position: relative;
+                height: 350px;
+                width: 250px;  
+                margin: 0 auto;
+            }
+            /*
+            .team-member-card img{
+            left: 0; 
+            -webkit-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            } */
+            /*Keeps the image opaque after the animation*/
+            .team-member-card img.team-img:hover{
+                opacity: 0;
+            }
+            @keyframes meme-switch {
+                0%{
+                    -webkit-transform: rotateY(0deg);
+                    opacity: 1;
+                }
+                95%{
+                    opacity: 0;
+                }
+                100%{
+                    -webkit-transform: rotateY(90deg);
+                    opacity:0;
+                }
+            }
+            @keyframes gif-switch {
+                0%{
+                    -webkit-transform: rotateY(90deg);
+                    opacity: 0;
+                }
+                50%{
+                    -webkit-transform: rotateY(90deg);
+                    opacity: 0;
+                }
+                100%{
+                    -webkit-transform: rotateY(0deg);
+                    opacity:1;
+                }
+            }
+            /* Try with opacity 0 for the underlying image that then rotates and opacity turns to 100% to see if it gives the desired effect*/
+            .team-member-card:hover img.team-img {
+                animation-name: meme-switch;
+                animation-iteration-count: 1;
+                animation-duration: 250ms;
+                animation-fill-mode: forwards;  
+            }
+            .team-member-card:hover img.gif{
+                animation-name: gif-switch;
+                animation-iteration-count: 1;
+                animation-duration: 250ms;
+                animation-fill-mode: forwards;  
+            }
+            .temp{
+                position:relative;
+                height:250px;
+                overflow: hidden;
+                border: 0px solid var(--primary);
+                /*width:250px;
+                height: 250px;*/
+                
+                
+            }
+            .team-img{
+                position: relative;
+                height:100%;
+                width: 100%;
+                /*height:249px;*/
+                /*width:250px;*/
+                overflow: hidden;
+                
+            }
+            .gif{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                display: block;
+                margin-top: auto;
+                margin-bottom: auto;
+                /*height:100%;*/
+                
+                /*height:249px;*/
+                overflow: hidden;
+                
+            }
+            figure{
+            }
+            figcaption{
+                text-align: center;
+                display: block;
+                margin-top: 8px;
+                color: black;
+                line-height: 1.2em;
+                font-size: 19px;
+            }
+            footer{
+                height:300px;
+            }
+            .person-caption{
+                display: block;
+                font-size: 17px;
+                color:#393B3C;
+            }
+            .name{
+                color: #C6421F;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .parallax {
+                background-image: url("https://www.biomni.com/wp-content/uploads/2017/10/Team-large.jpg")
+            }
+        </style> 
+
+    </head>
+
+    <div class="parallax"></div>
+
+    <body>
+
+
+        <div class= "content blur-box" style="font-size:16px;">
+            <div class ="content-text" >
+
+                <div class="content-card-heading"><h1>Meet The Team</h1></div>
+                <div style="height:3em;"></div>
+             
+                <div class="team-grid">
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="giphy.hurthand.gif">
+                                <img class="team-img" src="Markus.img.JPG">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="tldr.gif">
+                                <img class="team-img" src="green-deco.gif">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="tldr.gif">
+                                <img class="team-img" src="green-deco.gif">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="tldr.gif">
+                                <img class="team-img" src="green-deco.gif">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="tldr.gif">
+                                <img class="team-img" src="green-deco.gif">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="tldr.gif">
+                                <img class="team-img" src="green-deco.gif">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+
+
+
+
+                    <!-- End of Team Grid-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-header">
+            <img src="uskyline.jpg">
+            <h1>Our Advisors and Consultants</h1>
+        </div>
+
+
+        <div class="content">
+            <div class ="content-text" >
+                <div class="content-card-heading"><h1>And Our Advisors</h1></div>
+                <div style="height:3em;"></div>
+
+                <div class="team-grid">
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="tldr.gif">
+                                <img class="team-img" src="green-deco.gif">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="tldr.gif">
+                                <img class="team-img" src="green-deco.gif">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="team-member-card">
+                        <figure>
+                            <div class ="temp">
+                                <img class="gif" src="tldr.gif">
+                                <img class="team-img" src="green-deco.gif">
+                            </div>
+                            <figcaption>
+                                <span class="person-caption name"> John Doe</span>
+                                <span class="person-caption"> Bachelor in Computer Science</span>
+                                <span class="person-caption"> Wiki</span>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <footer></footer>
+
+    </body>
+
+</html>
