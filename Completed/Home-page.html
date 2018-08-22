@@ -2,29 +2,38 @@
 {{Uppsala/javascript/iGemRemoval_js}}
 {{Uppsala/css_removal}}
 {{Uppsala/main_template}}
+{{Uppsala/scroll-button}}
+{{Uppsala/javascript/scroll-button}}
+{{Uppsala/javascript/redirect_js}}
+
 
 <html>
 <head>
+
+<!-- TODO: ADD FOOTER AND NAV -->
+
+
 <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 
-<link rel="stylesheet" href="http://2018.igem.org/Template:Uppsala/css_removal?action=raw&ctype=text/css" >
-<link rel="stylesheet" href="http://2018.igem.org/Template:Uppsala/main_template?action=raw&ctype=text/css" >
 
- </head>
+<style type="text/css">
+
+</style>
+</head>
+
+
     <div class="body">
         <div class="parallax"></div>
+        
+        <!-- The Text "Wormbuster" is displayed on the main image -->
         <div class="sv">
 
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 909 133" style="enable-background:new 0 0 909 133;" xml:space="preserve">
 
-                            <style type="text/css">
-                                .st0{fill:none;}
-                                .st1{fill:#fff;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
-                            </style>
-                            <g>
-                                <rect x="5" y="19" class="st0" width="1062" height="521"/>
-                                <path class="st1" d="M37.9,86l13.1-32.1c2.2-5.5,6.2-16,12-31.4h3.4c2.2,6.9,5.2,15.7,9,26.3l13.6,38.1l10.3-35.5
+                       <g>
+                           <rect x="5" y="19" class="st0" width="1062" height="10"/>
+                           <path class="st1" d="M37.9,86l13.1-32.1c2.2-5.5,6.2-16,12-31.4h3.4c2.2,6.9,5.2,15.7,9,26.3l13.6,38.1l10.3-35.5
                                                      c1-3.4,2.7-10,5.1-19.7c0.2-0.9,0.3-1.6,0.3-2.1c0-0.7-0.3-1.2-0.8-1.5s-1.9-0.6-4.2-0.8l-5.1-0.4v-3.5c5.3,0.3,9.4,0.4,12.4,0.4
                                                      c3.2,0,7.2-0.1,11.9-0.4v3.5h-2.9c-1.3,0-2.2,0.3-2.9,0.9c-1.2,1.2-4,9.1-8.5,23.6C98.6,70.5,93.6,88.1,89.7,104H84
                                                      c-0.7-2.5-1.2-4.4-1.7-5.6c-1.7-4.8-5.5-15.5-11.5-31.9l-9.2-25.3L51,66.7C44.7,81.9,40.1,94.3,37,104h-5.6l-3-13.8
@@ -101,31 +110,41 @@
                                                      c0-3-0.7-5.5-2-7.6c-1.3-2.1-3.1-3.6-5.5-4.6s-6.7-1.8-13.1-2.3c-8.5-0.7-14.2-1.7-17.2-3s-5.4-3.5-7.1-6.4
                                                      c-1.7-2.9-2.6-6.5-2.6-10.8c0-7.3,2.6-13.3,7.9-17.9c5.3-4.6,12.6-7,21.9-7c3.7,0,7.5,0.4,11.3,1.2C879.9,24.1,883.7,25.3,887.5,27
                                                      z"/>
-                            </g>
-
-                        </svg>
-                    </div>
+                         </g>
+                    </svg>
+              </div>
 
         <div class="under-heading"><h1>Uppsala iGEM 2018</h1></div>
         <div class="igem-icon"><a href="http://2018.igem.org/Main_Page"><img src="http://2018.igem.org/wiki/images/b/b0/T--Uppsala--graylogo.png"></a></div>
 
 
+
+<div class ="scroll-down-button">
+        <section id="section02" class="demo">
+           <h1></h1>
+           <a href="#scrolldown"><span></span></a>
+        </section>
+</div>
+
+
+<!-- TODO: REMOVE
         <div class ="scroll-pointer">
-            <img class="center-icon" src="http://2018.igem.org/wiki/images/a/a1/T--Uppsala--downwardred.png" > 
-        </div> 
+            <svg class="arrows">
+		              <path class="a1" d="M0 20 L30 52 L60 20"></path>
+		              <path class="a2" d="M0 30 L30 62 L60 30"></path>
+		              <path class="a3" d="M0 40 L30 72 L60 40"></path>
+	           </svg>
+        </div>
+-->
+
 
         <div class= "content blur-box" style="font-size:16px;">
-            <div class ="content-text" >
 
+            <div class ="content-text" id="scrolldown" >
 
                   <div style="height:5em;"></div>
                   
                   <p>Nematode parasites of the strongyle family cause the agricultural industry substantial losses and grief each year due to the detrimental effects they have on livestock. Common issues include severe health damage in the host animal as well as resistance development to anthelmintics in the most commonly occurring strongyles. There are currently no easy methods for diagnosing these parasites. By reprogramming a smart bacterium to detect and report the presence of the parasites, we aim to develop a simple diagnostic method. This will provide the tools necessary to help farmers both to make decisions on whether to treat their animals and to prevent infection to begin with. </p>
-
-
-
-             
-
 
                <div class="card-holder">
                     <div class="content-card-heading"><h1>Our Targets:</h1></div>
@@ -155,23 +174,16 @@
                     </div>
                 </div>
 
+   <div class="section" id="scrolldown1">
    <h1>The Worm Busters</h1>
                 <p>One approach for designing a diagnostic system against the strongyles is to engineer a “smart” bacterium which will live in the intestinal tract and is capable of reacting to the presence of the parasite by emitting a quantifiable signal. This biosensor may, for instance, induce the production of a detectable fluorescent protein in the feces of the animal. Large strongyles, however, are more elusive and are less frequently present in the intestine during an infection. Here it would be suitable to instead try and detect the presence of the parasite on the pastures as to avoid infection altogether, by developing bacteria responding to the parasite outside of the animal body.   </p>
 <br>
 
 <p> Our work is dependent on finding one or more genes in <i>E.coli</i> which will, exclusively, be highly expressed when the cell is exposed to the parasitic worms. This is done by co-culturing <i>E.coli</i> in liquid medium along with live strongyles, which are harvested from feces and sterilized. From here, the E.coli cells are separated from the solution and their entire transcriptomic suite is extracted and sequenced to detect genes of interest. Any found genes which display promise will have to be validated by qPCR (which is a similar method) in a second run to confirm that they are only expressed due to the strongyle presence. Another approach to tackle our challenge is to screen for interaction between the surface proteins on the strongyle and short peptides. Through affinity screening of a random peptide library displayed on the surface of phages, we can select a peptide with a high affinity to the nematodes surface.  </p>
-
-
-
-
-
-
+   </div>
 
 
                <div style="height:5em;"></div>
-
-
-                
 
                 </div>
 
@@ -181,4 +193,6 @@
             </div>
         </div>
     </div>
+
 </html>
+
